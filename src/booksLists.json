@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Dom Quixote",
+    "author": "Miguel de Cervantes",
+    "details": "Dom Quixote de la Mancha é um romance escrito pelo espanhol Miguel de Cervantes.",
+    "genre": "Romance"
+  },
+  {
+    "title": "Crepúsculo",
+    "author": "Stephenie Meyer",
+    "details": "Crepúsculo é o primeiro livro da série Crepúsculo, escrito por Stephenie Meyer.",
+    "genre": "Romance"
+  },
+  {
+    "title": "O Hobbit",
+    "author": "J.R.R. Tolkien",
+    "details": "O Hobbit é um livro de fantasia escrito por J.R.R. Tolkien, que serve como prelúdio para a trilogia O Senhor dos Anéis.",
+    "genre": "Fantasia"
+  },
+  {
+    "title": "As Crônicas de Nárnia",
+    "author": "C.S. Lewis",
+    "details": "As Crônicas de Nárnia é uma série de livros de fantasia escrita por C.S. Lewis.",
+    "genre": "Fantasia"
+  },
+  {
+    "title": "Romeu e Julieta",
+    "author": "William Shakespeare",
+    "details": "Romeu e Julieta é uma das tragédias mais conhecidas de William Shakespeare, escrita no século XVI.",
+    "genre": "Romance"
+  },
+  {
+    "title": "O Senhor dos Anéis",
+    "author": "J.R.R. Tolkien",
+    "details": "O Senhor dos Anéis é uma trilogia de livros de fantasia escrita por J.R.R. Tolkien.",
+    "genre": "Fantasia"
+  }
+]

@@ -13,17 +13,20 @@ export const ContainerBook = styled.div`
   margin: 2% 5%;
 `;
 
-export const Title = styled.h1`
+export const Title = styled.h2`
   text-align: center;
-  font-size: 27px;
+  width: 70%;
+`;
+
+export const Author = styled.h4`
+  text-align: center;
   width: 80%;
 `;
 
-export const Author = styled.h3``;
-
 export const Details = styled.p`
   text-align: center;
-  width: 60%;
+  width: 50%;
+  overflow-wrap: break-word;
 `;
 
 export const CloseButton = styled.span`
@@ -58,26 +61,23 @@ export const Modal = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 11;
-  background-color: rgb(124, 124, 124);
+  background-color: rgb(130, 139, 147);
   border-radius: 10px;
-  height: 100px;
+  height: max-content;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   width: 60%;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-
-  &:before {
-    display: block;
-  }
 
   button {
     color: #000;
     font-size: 20px;
     position: absolute;
-    right: 0px;
-    top: 0;
+    right: -13px;
+    top: -13px;
     border: none;
     border-radius: 10px;
     background-color: white;

@@ -7,6 +7,7 @@ interface createContextValue {
   setBook: React.Dispatch<React.SetStateAction<IBook[]>>,
   form: IBookForm,
   setForm: React.Dispatch<React.SetStateAction<IBookForm>>,
+  initialBooks: IBook[],
 }
 
 export const BookContext = createContext({} as createContextValue);
@@ -18,7 +19,7 @@ export const BookProvider = ({ children }: IBookProviderProps) => {
   const [form, setForm] = useState<IBookForm>({ title: '', author: '', genre: '', details: '' });
 
   return (
-    <BookContext.Provider value={{ book, setBook, form, setForm }}>
+    <BookContext.Provider value={{ book, setBook, form, setForm, initialBooks }}>
       {children}
     </BookContext.Provider>
   )
@@ -30,6 +31,7 @@ export const useBookContext = () => {
     setBook,
     form,
     setForm,
+    initialBooks
   } = useContext(BookContext);
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>) {
@@ -44,6 +46,7 @@ export const useBookContext = () => {
 
     setBook([...book, form]);
     setForm({ title: '', author: '', genre: '', details: '' })
+    return alert('Livro adicionado com sucesso!');
   }
 
   function removeBook(title: string) {
@@ -53,7 +56,9 @@ export const useBookContext = () => {
 
   function filterBook(genre: string) {
     const filteredBook = book.filter(book => book.genre === genre);
-    if (filteredBook.length === 0) return alert('Nenhum genêro encontrado')
+    const initialFilteredBook = initialBooks.filter(book => book.genre === genre);
+    if (filteredBook.length === 0) return setBook(initialFilteredBook)
+
     setBook(filteredBook)
   }
 
@@ -71,5 +76,6 @@ export const useBookContext = () => {
     removeBook,
     filterBook,
     resetBook,
+    initialBooks
   }
 }
